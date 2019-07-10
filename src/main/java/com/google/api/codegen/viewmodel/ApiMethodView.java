@@ -20,8 +20,8 @@ public interface ApiMethodView {
   String name();
 
   interface Builder {
-    ApiMethodView.Builder initCode(InitCodeView val);
+      ApiMethodView.Builder initCode(@org.checkerframework.checker.returnsrcvr.qual.This Builder this, InitCodeView val);
 
-    ApiMethodView.Builder samples(List<MethodSampleView> samples);
+    ApiMethodView.Builder samples(@org.checkerframework.checker.returnsrcvr.qual.This List<MethodSampleView> samples);
   }
 }

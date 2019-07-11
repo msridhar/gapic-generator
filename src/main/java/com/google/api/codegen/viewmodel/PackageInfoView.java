@@ -67,7 +67,7 @@ public abstract class PackageInfoView implements ViewModel {
     return SnippetSetRunner.SNIPPET_RESOURCE_ROOT;
   }
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"isInferredBeta"}) Builder newBuilder() {
     return new AutoValue_PackageInfoView.Builder().isInferredBeta(false);
   }
 

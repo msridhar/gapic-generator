@@ -182,7 +182,7 @@ public abstract class PackageMetadataView implements ViewModel {
 
   public abstract boolean publishProtos();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"hasSmokeTests"}) Builder newBuilder() {
     return new AutoValue_PackageMetadataView.Builder().hasSmokeTests(false);
   }
 

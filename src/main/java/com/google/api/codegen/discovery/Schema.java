@@ -420,7 +420,7 @@ public abstract class Schema implements Node {
         && Objects.equals(type(), schema2.type());
   }
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"setDescription", "setDefaultValue", "setLocation", "setPattern", "setProperties", "setReference"}) Builder newBuilder() {
     return new AutoValue_Schema.Builder()
         .setDefaultValue("")
         .setDescription("")

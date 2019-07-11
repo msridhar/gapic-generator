@@ -99,7 +99,7 @@ public abstract class InitCodeContext {
   /** A map of field names to field configs. Defaults to the empty map. */
   public abstract ImmutableMap<String, FieldConfig> fieldConfigMap();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"symbolTable", "initValueConfigMap", "fieldConfigMap", "outputType", "additionalInitCodeNodes", "initFieldConfigStrings", "initFieldConfigStrings", "sampleParamConfigMap"}) Builder newBuilder() {
     return new AutoValue_InitCodeContext.Builder()
         .symbolTable(new SymbolTable())
         .initValueConfigMap(ImmutableMap.<String, InitValueConfig>of())

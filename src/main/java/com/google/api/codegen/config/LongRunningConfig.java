@@ -139,7 +139,7 @@ public abstract class LongRunningConfig {
    * Creates an instance of LongRunningConfig.Builder based on a method's GAPIC config's LRO polling
    * settings.
    */
-  private static LongRunningConfig.Builder getGapicConfigLroRetrySettingsOrDefault(
+  private static LongRunningConfig.@org.checkerframework.checker.builder.qual.CalledMethods({"setInitialPollDelay", "setPollDelayMultiplier", "setMaxPollDelay", "setTotalPollTimeout"}) Builder getGapicConfigLroRetrySettingsOrDefault(
       DiagCollector diagCollector, LongRunningConfigProto longRunningConfigProto) {
     if (longRunningConfigProto.equals(LongRunningConfigProto.getDefaultInstance())) {
       return newBuilder()

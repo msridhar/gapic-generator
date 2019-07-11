@@ -30,7 +30,7 @@ public abstract class ResourceNameInitValueView implements InitValueView {
     return ResourceNameInitValueView.class.getSimpleName();
   }
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"convertToString"}) Builder newBuilder() {
     return new AutoValue_ResourceNameInitValueView.Builder().convertToString(false);
   }
 

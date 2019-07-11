@@ -137,7 +137,7 @@ public abstract class DiscoveryRequestType implements TypeModel {
 
   abstract String typeName();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"isEmptyType"}) Builder newBuilder() {
     return new AutoValue_DiscoveryRequestType.Builder().isEmptyType(false);
   }
 

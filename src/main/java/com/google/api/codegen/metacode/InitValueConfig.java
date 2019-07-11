@@ -54,7 +54,7 @@ public abstract class InitValueConfig {
 
   public abstract Builder toBuilder();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"setResourceNameBindingValues"}) Builder newBuilder() {
     return new AutoValue_InitValueConfig.Builder().setResourceNameBindingValues(ImmutableMap.of());
   }
 

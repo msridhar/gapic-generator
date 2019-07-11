@@ -39,7 +39,7 @@ public abstract class SettingsDocView {
 
   public abstract TransportProtocol transportProtocol();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"transportProtocol"}) Builder newBuilder() {
     return new AutoValue_SettingsDocView.Builder().transportProtocol(TransportProtocol.GRPC);
   }
 

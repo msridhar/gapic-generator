@@ -214,7 +214,13 @@ public class PythonGapicSurfaceTransformer implements ModelToViewTransformer<Pro
     }
   }
 
-  private DynamicLangXApiView.Builder generateApiView(GapicInterfaceContext context) {
+  private DynamicLangXApiView.@org.checkerframework.checker.builder.qual.CalledMethods({"apiMethods", "authScopes", "batchingDescriptors", 
+    "clientConfigPath", "doc", "formatResourceFunctions", "grpcClientTypeName", 
+    "grpcStreamingDescriptors", "hasBatchingMethods", "hasDefaultServiceAddress", 
+    "hasDefaultServiceScopes", "hasLongRunningOperations", "hasPageStreamingMethods", 
+    "interfaceKey", "longRunningDescriptors", "name", "pageStreamingDescriptors", 
+    "parseResourceFunctions", "pathTemplateGetterFunctions", "pathTemplates", "protoFilename", 
+    "serviceHostname", "servicePort", "serviceTitle", "stubs"}) Builder generateApiView(GapicInterfaceContext context) {
     SurfaceNamer namer = context.getNamer();
     String name = namer.getApiWrapperClassName(context.getInterfaceConfig());
     List<OptionalArrayMethodView> methods = apiMethodTransformer.generateApiMethods(context);

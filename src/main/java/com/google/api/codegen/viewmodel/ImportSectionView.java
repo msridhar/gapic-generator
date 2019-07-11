@@ -44,7 +44,7 @@ public abstract class ImportSectionView {
 
   public abstract List<ImportFileView> serviceImports();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"standardImports", "externalImports", "appImports", "serviceImports"}) Builder newBuilder() {
     return new AutoValue_ImportSectionView.Builder()
         .standardImports(ImmutableList.<ImportFileView>of())
         .externalImports(ImmutableList.<ImportFileView>of())

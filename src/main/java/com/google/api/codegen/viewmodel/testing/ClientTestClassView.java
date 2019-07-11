@@ -94,7 +94,7 @@ public abstract class ClientTestClassView {
   @Nullable // Used in C#
   public abstract String grpcServiceClassName();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.builder.qual.CalledMethods({"apiHasUnaryUnaryMethod", "apiHasUnaryStreamingMethod", "apiHasStreamingUnaryMethod", "apiHasStreamingStreamingMethod", "hasLongRunningOperations"}) Builder newBuilder() {
     return new AutoValue_ClientTestClassView.Builder()
         .apiHasUnaryUnaryMethod(false)
         .apiHasUnaryStreamingMethod(false)

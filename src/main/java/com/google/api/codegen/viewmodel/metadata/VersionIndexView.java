@@ -22,6 +22,7 @@ import com.google.auto.value.AutoValue;
 import com.google.common.base.Strings;
 import java.util.List;
 import javax.annotation.Nullable;
+import org.checkerframework.checker.builder.qual.CalledMethods;
 
 @AutoValue
 public abstract class VersionIndexView implements ViewModel {
@@ -81,7 +82,7 @@ public abstract class VersionIndexView implements ViewModel {
     return requireViews().size() > 1;
   }
 
-  public static Builder newBuilder() {
+  public static @CalledMethods({"packageHasEnums", "type", "apiVersion"}) Builder newBuilder() {
     // Use v1 as the default version.
     return new AutoValue_VersionIndexView.Builder()
         .apiVersion("v1")

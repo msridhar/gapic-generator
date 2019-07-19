@@ -99,8 +99,8 @@ dependencies {
   annotationProcessor libraries['maven.com_google_auto_value_auto_value']
 
   // for running typesafe-builder-checker
-  annotationProcessor 'com.github.kelloggm:typesafe-builder-checker:0323eae974'
-  implementation 'com.github.kelloggm:typesafe-builder-checker:0323eae974'
+  annotationProcessor 'com.github.kelloggm.typesafe-builder-checker:typesafe-builder:0323eae974'
+  implementation 'com.github.kelloggm.typesafe-builder-checker:typesafe-builder-qual:0323eae974'
 
 }
 

@@ -68,6 +68,7 @@ ext {
 repositories {
   mavenLocal()
   mavenCentral()
+  maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -96,6 +97,11 @@ dependencies {
     libraries['maven.pl_pragmatists_JUnitParams']
 
   annotationProcessor libraries['maven.com_google_auto_value_auto_value']
+
+  // for running typesafe-builder-checker
+  annotationProcessor 'com.github.kelloggm:typesafe-builder-checker:0323eae974'
+  implementation 'com.github.kelloggm:typesafe-builder-checker:0323eae974'
+
 }
 
 task protocPluginJar(type: com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {

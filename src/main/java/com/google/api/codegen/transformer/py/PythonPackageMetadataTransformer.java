@@ -183,7 +183,9 @@ public class PythonPackageMetadataTransformer implements ModelToViewTransformer<
     return metadata.build();
   }
 
-  private PackageMetadataView.Builder generateMetadataView(
+  private PackageMetadataView.@org.checkerframework.checker.builder.qual.CalledMethods({"author", "email", "fullName", "gapicPackageName", 
+	    "hasMultipleServices", "homepage", "licenseName", "majorVersion", "outputPath", "protoPackageName", "protoPath", 
+	    "publishProtos", "shortName", "templateFileName", "hasSmokeTests"}) Builder generateMetadataView(
       ApiModel model,
       GapicProductConfig productConfig,
       String template,

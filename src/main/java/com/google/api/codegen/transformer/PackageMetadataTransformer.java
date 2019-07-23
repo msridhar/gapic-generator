@@ -36,7 +36,9 @@ public class PackageMetadataTransformer {
    * Construct a partial ViewModel, represented by its Builder, using all of the proto package
    * dependencies specified in the package config.
    */
-  public PackageMetadataView.Builder generateMetadataView(
+  public PackageMetadataView.@org.checkerframework.checker.builder.qual.CalledMethods({"author", "email", "fullName", "gapicPackageName", 
+    "hasMultipleServices", "homepage", "licenseName", "majorVersion", "outputPath", "protoPackageName", "protoPath", 
+    "publishProtos", "shortName", "templateFileName", "hasSmokeTests"}) Builder generateMetadataView(
       PackageMetadataNamer namer,
       PackageMetadataConfig packageConfig,
       ApiModel model,
@@ -50,7 +52,9 @@ public class PackageMetadataTransformer {
    * Construct a partial ViewModel, represented by its Builder, from the config. Proto package
    * dependencies are included only if whitelisted.
    */
-  public PackageMetadataView.Builder generateMetadataView(
+  public PackageMetadataView.@org.checkerframework.checker.builder.qual.CalledMethods({"author", "email", "fullName", "gapicPackageName", 
+    "hasMultipleServices", "homepage", "licenseName", "majorVersion", "outputPath", "protoPackageName", "protoPath", 
+    "publishProtos", "shortName", "templateFileName", "hasSmokeTests"}) Builder generateMetadataView(
       PackageMetadataNamer namer,
       PackageMetadataConfig packageConfig,
       ApiModel model,

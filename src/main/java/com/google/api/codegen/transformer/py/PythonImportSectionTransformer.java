@@ -379,7 +379,7 @@ public class PythonImportSectionTransformer implements ImportSectionTransformer 
         .build();
   }
 
-  private ImportSectionView.Builder generateTypesProtoImports(
+  private ImportSectionView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"localImports", "sharedImports", "appImports", "standardImports", "externalImports", "serviceImports"}) Builder generateTypesProtoImports(
       Model model, GapicProductConfig productConfig) {
     ImportSectionView.Builder importView = ImportSectionView.newBuilder();
 

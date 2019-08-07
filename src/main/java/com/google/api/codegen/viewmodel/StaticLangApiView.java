@@ -86,7 +86,7 @@ public abstract class StaticLangApiView {
   @Nullable // Used in Java
   public abstract List<StaticLangPagedResponseView> pagedResponseViews();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"apiHasUnaryMethod", "apiHasServerStreamingMethod", "apiHasBidiStreamingMethod", "apiHasClientStreamingMethod"}) Builder newBuilder() {
     return new AutoValue_StaticLangApiView.Builder()
         .apiHasUnaryMethod(false)
         .apiHasServerStreamingMethod(false)

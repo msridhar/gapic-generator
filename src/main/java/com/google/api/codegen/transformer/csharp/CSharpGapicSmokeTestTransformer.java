@@ -112,7 +112,8 @@ public class CSharpGapicSmokeTestTransformer implements ModelToViewTransformer<P
     return builder.build();
   }
 
-  private SmokeTestClassView.Builder generateSmokeTestViewBuilder(GapicInterfaceContext context) {
+  private SmokeTestClassView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"apiClassName", 
+    "apiSettingsClassName", "fileHeader", "name", "requireProjectId"}) Builder generateSmokeTestViewBuilder(GapicInterfaceContext context) {
     SurfaceNamer namer = context.getNamer();
     String name = namer.getSmokeTestClassName(context.getInterfaceConfig());
     SmokeTestClassView.Builder smokeTestBuilder = SmokeTestClassView.newBuilder();

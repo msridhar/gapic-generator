@@ -67,7 +67,7 @@ public abstract class SmokeTestClassView implements ViewModel {
   @Nullable
   public abstract String methodName();
 
-  public static @org.checkerframework.checker.builder.qual.CalledMethods({"requireProjectId"}) Builder newBuilder() {
+  public static @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"requireProjectId"}) Builder newBuilder() {
     return new AutoValue_SmokeTestClassView.Builder().requireProjectId(false);
   }
 

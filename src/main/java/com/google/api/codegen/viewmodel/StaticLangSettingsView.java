@@ -87,7 +87,7 @@ public abstract class StaticLangSettingsView {
   @Nullable // Used in Java
   public abstract TransportProtocol transportProtocol();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"transportProtocol", "useDefaultServicePortInEndpoint"}) Builder newBuilder() {
     return new AutoValue_StaticLangSettingsView.Builder()
         .transportProtocol(TransportProtocol.GRPC)
         .useDefaultServicePortInEndpoint(true);

@@ -31,7 +31,7 @@ public abstract class StaticLangApiMethodSnippetView {
 
   public abstract boolean requiresNamedArguments();
 
-  public static @org.checkerframework.checker.builder.qual.CalledMethods({"requiresNamedArguments"}) Builder newBuilder() {
+  public static @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"requiresNamedArguments"}) Builder newBuilder() {
     return new AutoValue_StaticLangApiMethodSnippetView.Builder().requiresNamedArguments(false);
   }
 

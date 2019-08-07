@@ -20,8 +20,10 @@ public interface ApiMethodView {
   String name();
 
   interface Builder {
-    ApiMethodView.Builder initCode(InitCodeView val);
+//    ApiMethodView.Builder initCode(InitCodeView val);
+    ApiMethodView.@org.checkerframework.checker.returnsrcvr.qual.This Builder initCode(InitCodeView val);
 
-    ApiMethodView.Builder samples(List<MethodSampleView> samples);
+//    ApiMethodView.Builder samples(List<MethodSampleView> samples);
+    ApiMethodView.@org.checkerframework.checker.returnsrcvr.qual.This Builder samples(List<MethodSampleView> samples);
   }
 }

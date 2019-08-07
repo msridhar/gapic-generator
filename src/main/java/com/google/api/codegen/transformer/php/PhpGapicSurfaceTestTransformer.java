@@ -230,7 +230,7 @@ public class PhpGapicSurfaceTestTransformer implements ModelToViewTransformer<Pr
     return testClass.build();
   }
 
-  private SmokeTestClassView.Builder createSmokeTestClassViewBuilder(
+  private SmokeTestClassView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"apiSettingsClassName", "apiClassName", "apiName", "templateFileName", "apiMethod", "requireProjectId", "methodName", "fileHeader"}) Builder createSmokeTestClassViewBuilder(
       GapicInterfaceContext context) {
     addSmokeTestImports(context.getImportTypeTable());
 

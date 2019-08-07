@@ -93,7 +93,7 @@ public abstract class StaticLangApiMessageView implements Comparable<StaticLangA
   // If this field should be part of the parent message's serialization.
   public abstract boolean isSerializable();
 
-  public static StaticLangApiMessageView.Builder newBuilder() {
+  public static StaticLangApiMessageView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"hasRequiredProperties", "hasFieldMask", "isSerializable"}) Builder newBuilder() {
     return new AutoValue_StaticLangApiMessageView.Builder()
         .hasRequiredProperties(false)
         .hasFieldMask(false)

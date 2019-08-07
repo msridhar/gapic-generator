@@ -61,7 +61,9 @@ public class JavaPackageTransformer {
   /**
    * Creates a partially initialized builders that can be used to build PackageMetadataViews later.
    */
-  protected final List<PackageMetadataView.Builder> generateMetadataViewBuilders(
+  protected final ArrayList<PackageMetadataView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"author", "email", "fullName", "gapicPackageName", 
+	    "hasMultipleServices", "homepage", "licenseName", "majorVersion", "outputPath", "protoPackageName", "protoPath", 
+	    "publishProtos", "shortName", "templateFileName", "hasSmokeTests"}) Builder> generateMetadataViewBuilders(
       ApiModel model, PackageMetadataConfig config, PackagingArtifactType artifactType) {
     String packageName = config.packageName();
     JavaPackageMetadataNamer namer = new JavaPackageMetadataNamer(packageName, artifactType);

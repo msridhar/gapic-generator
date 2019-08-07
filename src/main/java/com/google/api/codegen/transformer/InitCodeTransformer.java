@@ -811,7 +811,7 @@ public class InitCodeTransformer {
     }
   }
 
-  private ResourceNameInitValueView.Builder createResourceNameInitValueView(
+  private ResourceNameInitValueView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"resourceTypeName", "formatArgs"}) Builder createResourceNameInitValueView(
       MethodContext context, FieldConfig fieldConfig, InitCodeNode item) {
     String resourceName =
         context.getNamer().getAndSaveElementResourceTypeName(context.getTypeTable(), fieldConfig);

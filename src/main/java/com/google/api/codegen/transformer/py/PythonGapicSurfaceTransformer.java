@@ -214,7 +214,7 @@ public class PythonGapicSurfaceTransformer implements ModelToViewTransformer<Pro
     }
   }
 
-  private DynamicLangXApiView.@org.checkerframework.checker.builder.qual.CalledMethods({"apiMethods", "authScopes", "batchingDescriptors", 
+  private DynamicLangXApiView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"apiMethods", "authScopes", "batchingDescriptors", 
     "clientConfigPath", "doc", "formatResourceFunctions", "grpcClientTypeName", 
     "grpcStreamingDescriptors", "hasBatchingMethods", "hasDefaultServiceAddress", 
     "hasDefaultServiceScopes", "hasLongRunningOperations", "hasPageStreamingMethods", 

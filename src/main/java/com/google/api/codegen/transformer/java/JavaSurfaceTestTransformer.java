@@ -157,7 +157,7 @@ public class JavaSurfaceTestTransformer<ApiModelT extends ApiModel>
    * <p>A helper method that creates a partially initialized builder that can be customized and
    * build the smoke test class view later.
    */
-  SmokeTestClassView.Builder createSmokeTestClassViewBuilder(InterfaceContext context) {
+  SmokeTestClassView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"fileHeader", "apiSettingsClassName", "apiClassName", "templateFileName", "apiMethod", "requireProjectId"}) Builder createSmokeTestClassViewBuilder(InterfaceContext context) {
     addSmokeTestImports(context);
 
     MethodModel method = context.getInterfaceConfig().getSmokeTestConfig().getMethod();

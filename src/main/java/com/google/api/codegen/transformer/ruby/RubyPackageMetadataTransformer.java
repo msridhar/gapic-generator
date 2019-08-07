@@ -120,7 +120,9 @@ public class RubyPackageMetadataTransformer implements ModelToViewTransformer<Pr
         .build();
   }
 
-  public ReadmeMetadataView.Builder generateReadmeMetadataView(
+  public ReadmeMetadataView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"apiSummary", "authDocumentationLink", "developmentStatusTitle", 
+    "exampleMethods", "fullName", "gapicPackageName", "hasMultipleServices", "libraryDocumentationLink", 
+    "mainReadmeLink", "majorVersion", "shortName", "targetLanguage", "versioningDocumentationLink"}) Builder generateReadmeMetadataView(
       ApiModel model, GapicProductConfig productConfig, RubyPackageMetadataNamer namer) {
     return ReadmeMetadataView.newBuilder()
         .identifier(namer.getMetadataIdentifier())

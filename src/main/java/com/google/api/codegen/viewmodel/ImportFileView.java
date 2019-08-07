@@ -23,7 +23,7 @@ public abstract class ImportFileView {
 
   public abstract List<ImportTypeView> types();
 
-  public static @org.checkerframework.checker.builder.qual.CalledMethods({"moduleName"}) Builder newBuilder() {
+  public static @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"moduleName"}) Builder newBuilder() {
     return new AutoValue_ImportFileView.Builder().moduleName("");
   }
 

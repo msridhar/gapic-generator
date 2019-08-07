@@ -121,7 +121,7 @@ public class CSharpGapicUnitTestTransformer implements ModelToViewTransformer<Pr
     return builder.build();
   }
 
-  private ClientTestFileView.Builder generateUnitTestBuilder(GapicInterfaceContext context) {
+  private ClientTestFileView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"testClass", "fileHeader"}) Builder generateUnitTestBuilder(GapicInterfaceContext context) {
     SurfaceNamer namer = context.getNamer();
     String name = namer.getUnitTestClassName(context.getInterfaceConfig());
 

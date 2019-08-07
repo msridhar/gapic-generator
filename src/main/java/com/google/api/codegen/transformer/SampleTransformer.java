@@ -46,7 +46,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import org.checkerframework.checker.builder.qual.CalledMethods;
+
 
 /**
  * A class that performs the transformations needed to generate the MethodSampleView for the
@@ -70,7 +70,7 @@ public abstract class SampleTransformer {
 
   public abstract SampleImportTransformer sampleImportTransformer();
 
-  public static @CalledMethods({"sampleType", "initCodeTransformer", "outputTransformer", "sampleImportTransformer" }) Builder newBuilder() {
+  public static @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"sampleType", "initCodeTransformer", "outputTransformer", "sampleImportTransformer" }) Builder newBuilder() {
     return new AutoValue_SampleTransformer.Builder()
         .sampleType(SampleType.IN_CODE)
         .initCodeTransformer(defaultInitCodeTransformer)

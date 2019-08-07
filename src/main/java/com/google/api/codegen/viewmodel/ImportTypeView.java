@@ -27,7 +27,7 @@ public abstract class ImportTypeView {
 
   public abstract ImportType type();
 
-  public static @org.checkerframework.checker.builder.qual.CalledMethods({"type"}) Builder newBuilder() {
+  public static @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"type"}) Builder newBuilder() {
     return new AutoValue_ImportTypeView.Builder().type(ImportType.SimpleImport);
   }
 

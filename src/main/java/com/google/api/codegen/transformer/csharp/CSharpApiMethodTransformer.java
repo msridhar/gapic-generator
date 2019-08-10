@@ -50,6 +50,7 @@ public class CSharpApiMethodTransformer extends StaticLangApiMethodTransformer {
   }
 
   @Override
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", methods = {"serviceResponseTypeName"})
   protected void setServiceResponseTypeName(
       MethodContext context, StaticLangApiMethodView.Builder methodViewBuilder) {
     String responseTypeName =

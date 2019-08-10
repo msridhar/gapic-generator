@@ -633,6 +633,7 @@ public class InitCodeTransformer {
         .build();
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#1", methods = {"initValue", "needsLeadingNewline", "doc", "descriptions"})
   private void setInitValueAndComments(
       SimpleInitCodeLineView.Builder surfaceLine,
       MethodContext context,
@@ -709,6 +710,7 @@ public class InitCodeTransformer {
 
       initValue = simpleInitValue.build();
     }
+
     surfaceLine.initValue(initValue);
     surfaceLine.needsLeadingNewline(!isFirstItem);
     if (generateStandardComments) {

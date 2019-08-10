@@ -193,6 +193,7 @@ public class ApiCallableTransformer {
     return operationApiCallableBuilder.build();
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", methods = {"methodName", "asyncMethodName", "memberName", "settingsFunctionName", "grpcClientVarName", "transportSettingsVar", "httpMethod"})
   private void setCommonApiCallableFields(
       MethodContext context, ApiCallableView.Builder apiCallableBuilder) {
     MethodModel method = context.getMethodModel();

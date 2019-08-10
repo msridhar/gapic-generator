@@ -20,6 +20,7 @@ import com.google.api.codegen.configgen.viewmodel.RetryParamView;
 import com.google.common.collect.ImmutableList;
 import java.util.List;
 
+
 /** Generates view objects for the retry codes def and retry params def. */
 public class RetryTransformer {
   public static final String RETRY_CODES_IDEMPOTENT_NAME = "idempotent";
@@ -34,6 +35,7 @@ public class RetryTransformer {
   public static final int DEFAULT_MAX_RPC_TIMEOUT_MILLIS = 20000;
   public static final int DEFAULT_TOTAL_TIMEOUT_MILLIS = 600000;
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#1", methods = {"retryCodesDef", "retryParamsDef"})
   void generateRetryDefinitions(
       InterfaceView.Builder interfaceView,
       List<String> idempotentRetryCodes,

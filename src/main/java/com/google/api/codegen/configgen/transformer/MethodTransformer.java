@@ -61,7 +61,9 @@ public class MethodTransformer {
     }
     return methods.build();
   }
-
+  
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", 
+		  methods = {"requiredFields", "resourceNameTreatment"})
   private void generateField(MethodModel method, MethodView.Builder methodView) {
     List<String> parameterList = new ArrayList<>();
     List<FieldModel> fieldList = new ArrayList<>();
@@ -141,6 +143,7 @@ public class MethodTransformer {
     return request.tokenField() == null && request.pageSizeField() == null ? null : request;
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", methods = {"retryCodesName", "retryParamsName"})
   private void generateRetry(MethodModel method, MethodView.Builder methodView) {
     methodView.retryCodesName(
         method.isIdempotent()
@@ -148,7 +151,8 @@ public class MethodTransformer {
             : RetryTransformer.RETRY_CODES_NON_IDEMPOTENT_NAME);
     methodView.retryParamsName(RetryTransformer.RETRY_PARAMS_DEFAULT_NAME);
   }
-
+ 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", methods = {"fieldNamePatterns"})
   private void generateFieldNamePatterns(
       MethodModel method, MethodView.Builder methodView, Map<String, String> nameMap) {
     ImmutableList.Builder<FieldNamePatternView> fieldNamePatterns = ImmutableList.builder();

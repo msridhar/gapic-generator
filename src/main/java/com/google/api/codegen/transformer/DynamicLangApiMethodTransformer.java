@@ -158,6 +158,13 @@ public class DynamicLangApiMethodTransformer {
     return apiMethod.build();
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#5", methods = {  
+		  "apiClassName", "apiModuleName", "apiVariableName", "doc", "grpcMethodName", 
+		  "grpcStreamingType", "hasRequestParameters", "hasReturnValue", "headerRequestParams", 
+		  "isSingularRequestMethod", "key", "localPackageName", "methodParams", "name", "oneofParams", 
+		  "optionalRequestObjectParams", "optionalRequestObjectParamsNoPageToken", "packageName", "requestTypeName", 
+		  "requestVariableName", "requiredRequestObjectParams", "responseTypeName", "stubName", 
+		  "topLevelAliasedApiClassName", "versionAliasedApiClassName"})
   private void generateMethodCommon(
       GapicMethodContext context,
       InitCodeContext initContext,

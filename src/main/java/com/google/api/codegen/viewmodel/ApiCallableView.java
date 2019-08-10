@@ -71,6 +71,7 @@ public abstract class ApiCallableView {
   @Nullable
   public abstract HttpMethodView httpMethod();
 
+  @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"grpcStreamingType"})
   public static Builder newBuilder() {
     return new AutoValue_ApiCallableView.Builder()
         .grpcStreamingType(GrpcStreamingType.NonStreaming);

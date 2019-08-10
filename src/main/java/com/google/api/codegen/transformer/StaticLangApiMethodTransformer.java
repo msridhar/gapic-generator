@@ -607,6 +607,8 @@ public class StaticLangApiMethodTransformer {
     return methodViewBuilder.type(ClientMethodType.OperationCallableMethod).build();
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", methods = {
+		  "serviceResponseTypeName", "serviceRequestTypeName", "serviceRequestTypeConstructor", "serviceConstructorName", "apiClassName", "apiVariableName", "stubName", "settingsGetterName", "callableName", "modifyMethodName", "grpcStreamingType", "visibility", "releaseLevelAnnotation", "hasReturnValue", "headerRequestParams"})
   private void setCommonFields(
       MethodContext context, StaticLangApiMethodView.Builder methodViewBuilder) {
     MethodModel method = context.getMethodModel();
@@ -645,6 +647,7 @@ public class StaticLangApiMethodTransformer {
         headerRequestParamTransformer.generateHeaderRequestParams(context));
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", methods = {"serviceResponseTypeName"})
   protected void setServiceResponseTypeName(
       MethodContext context, StaticLangApiMethodView.Builder methodViewBuilder) {
     SurfaceNamer namer = context.getNamer();
@@ -663,6 +666,7 @@ public class StaticLangApiMethodTransformer {
     }
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#3", methods = {"listMethod"})
   private void setListMethodFields(
       MethodContext context,
       Synchronicity synchronicity,
@@ -716,6 +720,7 @@ public class StaticLangApiMethodTransformer {
     }
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#4", methods = {"doc", "forwardingMethodParams", "methodParams", "requestObjectParams", "pathTemplateChecks"})
   private void setFlattenedMethodFields(
       MethodContext context,
       List<ParamWithSimpleDoc> additionalParams,
@@ -752,6 +757,9 @@ public class StaticLangApiMethodTransformer {
     methodViewBuilder.pathTemplateChecks(generatePathTemplateChecks(context, fieldConfigs));
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#4", 
+		    methods = {"doc", "methodParams", "requestObjectParams", "pathTemplateChecks", 
+		    "requestObjectMethod"})
   private void setRequestObjectMethodFields(
       MethodContext context,
       String callableMethodName,
@@ -767,6 +775,9 @@ public class StaticLangApiMethodTransformer {
         callingForms);
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#5", 
+    methods = {"doc", "methodParams", "requestObjectParams", "pathTemplateChecks", 
+    "requestObjectMethod"})
   private void setRequestObjectMethodFields(
       MethodContext context,
       String callableMethodName,
@@ -807,6 +818,8 @@ public class StaticLangApiMethodTransformer {
     methodViewBuilder.requestObjectMethod(detailBuilder.build());
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#3", 
+    methods = {"doc", "methodParams", "requestObjectParams", "pathTemplateChecks", "callableMethod"})
   private void setCallableMethodFields(
       MethodContext context,
       String callableName,
@@ -858,6 +871,7 @@ public class StaticLangApiMethodTransformer {
             .build());
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", methods = {"responseTypeName"})
   private void setStaticLangAsyncReturnTypeName(
       MethodContext context, StaticLangApiMethodView.Builder methodViewBuilder) {
     SurfaceNamer namer = context.getNamer();
@@ -866,6 +880,7 @@ public class StaticLangApiMethodTransformer {
     methodViewBuilder.responseTypeName(returnTypeNickname);
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", methods = {"responseTypeName"})
   private void setStaticLangReturnTypeName(
       MethodContext context, StaticLangApiMethodView.Builder methodViewBuilder) {
     SurfaceNamer namer = context.getNamer();
@@ -874,6 +889,7 @@ public class StaticLangApiMethodTransformer {
     methodViewBuilder.responseTypeName(returnTypeNickname);
   }
 
+  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#2", methods = {"responseTypeName"})
   private void setStaticLangGrpcStreamingReturnTypeName(
       MethodContext context, StaticLangApiMethodView.Builder methodViewBuilder) {
     SurfaceNamer namer = context.getNamer();

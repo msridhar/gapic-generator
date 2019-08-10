@@ -47,7 +47,7 @@ public abstract class MethodDescriptorView {
   @Nullable
   public abstract HttpMethodView httpMethod();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"grpcStreamingType"}) Builder newBuilder() {
     return new AutoValue_MethodDescriptorView.Builder()
         .grpcStreamingType(GrpcStreamingType.NonStreaming);
   }

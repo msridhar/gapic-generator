@@ -68,7 +68,7 @@ public abstract class ApiCallSettingsView {
 
   public abstract Builder toBuilder();
 
-  public static Builder newBuilder() {
+  public static @org.checkerframework.checker.objectconstruction.qual.CalledMethods({"grpcStreamingType"}) Builder newBuilder() {
     return new AutoValue_ApiCallSettingsView.Builder()
         .grpcStreamingType(GrpcStreamingType.NonStreaming);
   }

@@ -96,7 +96,6 @@ dependencies {
     libraries['maven.pl_pragmatists_JUnitParams']
 
   annotationProcessor libraries['maven.com_google_auto_value_auto_value']
-  annotationProcessor 'net.sridharan.objectconstruction:object-construction-checker:0.1.1-SNAPSHOT'
 }
 
 task protocPluginJar(type: com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {

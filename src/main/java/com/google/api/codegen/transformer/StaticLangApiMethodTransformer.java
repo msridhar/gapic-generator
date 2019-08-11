@@ -666,7 +666,7 @@ public class StaticLangApiMethodTransformer {
     }
   }
 
-  @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#3", methods = {"listMethod"})
+    @org.checkerframework.checker.objectconstruction.qual.EnsuresCalledMethods(value = "#3", methods = {"listMethod", "responseTypeName"})
   private void setListMethodFields(
       MethodContext context,
       Synchronicity synchronicity,
@@ -717,6 +717,8 @@ public class StaticLangApiMethodTransformer {
         methodViewBuilder.responseTypeName(
             namer.getAndSaveAsyncPagedResponseTypeName(context, resourceFieldConfig));
         break;
+    default:
+        throw new RuntimeException("unexpected synchronicity " + synchronicity);
     }
   }
 

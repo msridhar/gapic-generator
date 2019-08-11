@@ -80,7 +80,9 @@ public class JavaPackageTransformer {
       additionalDependencies.add(packageDependency);
     }
 
-    ArrayList<PackageMetadataView.Builder> viewBuilders = new ArrayList<>();
+    ArrayList<PackageMetadataView.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"author", "email", "fullName", "gapicPackageName", 
+	    "hasMultipleServices", "homepage", "licenseName", "majorVersion", "outputPath", "protoPackageName", "protoPath", 
+	    "publishProtos", "shortName", "templateFileName", "hasSmokeTests"}) Builder> viewBuilders = new ArrayList<>();
     for (Map.Entry<String, String> entry : getSnippetsOutput().entrySet()) {
       PackageMetadataView.Builder viewBuilder =
           metadataTransformer

@@ -29,6 +29,7 @@ buildscript {
     classpath 'gradle.plugin.com.github.sherter.google-java-format:google-java-format-gradle-plugin:0.7.1'
     classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.0'
     classpath 'net.ltgt.gradle:gradle-apt-plugin:0.10'
+    classpath "org.checkerframework:checkerframework-gradle-plugin:0.4.10"
   }
 }
 
@@ -43,6 +44,7 @@ apply plugin: 'com.github.sherter.google-java-format'
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'signing'
 apply plugin: 'net.ltgt.apt'
+apply plugin: 'org.checkerframework'
 
 sourceCompatibility = 1.8
 
@@ -157,6 +159,28 @@ check.dependsOn jacocoTestReport
 task sourcesJar(type: Jar, dependsOn: classes) {
   classifier = 'sources'
   from sourceSets.main.allSource
+}
+
+// checker framework
+// To use a locally-built Checker Framework, run gradle with "-PcfLocal".
+if (project.hasProperty("cfLocal")) {
+  def cfHome = String.valueOf(System.getenv("CHECKERFRAMEWORK"))
+  dependencies {
+    compileOnly files(cfHome + "/checker/dist/checker-qual.jar")
+    testCompileOnly files(cfHome + "/checker/dist/checker-qual.jar")
+    checkerFramework files(cfHome + "/checker/dist/checker.jar")
+    checkerFrameworkAnnotatedJDK files(cfHome + "/checker/dist/jdk8.jar")
+  }
+}
+
+checkerFramework {
+    skipVersionCheck = true
+    checkers = ['org.checkerframework.checker.objectconstruction.ObjectConstructionChecker']
+    extraJavacArgs = ['-AsuppressWarnings=type.anno.before']
+}
+dependencies {
+    checkerFramework 'net.sridharan.objectconstruction:object-construction-checker:0.1.7-SNAPSHOT'
+    implementation 'net.sridharan.objectconstruction:object-construction-qual:0.1.7-SNAPSHOT'
 }
 
 // Protobuf

@@ -66,7 +66,8 @@ public abstract class GapicMethodConfig extends MethodConfig {
    * collector.
    */
   @Nullable
-  private static GapicMethodConfig.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"setHeaderRequestParams"}) Builder createCommonMethodConfig(
+  private static GapicMethodConfig.@org.checkerframework.checker.objectconstruction.qual.CalledMethods({"setHeaderRequestParams", "setTimeout", "setSampleCodeInitFields", "setRetrySettingsConfigName", 
+    "setSampleSpec", "setReleaseLevel", "setRetryCodesConfigName", "setMethodModel", "setVisibility"}) Builder createCommonMethodConfig(
       DiagCollector diagCollector,
       TargetLanguage language,
       @Nonnull MethodConfigProto methodConfigProto,
